@@ -96,13 +96,22 @@ a.number {
 }
 
 .promo-wrapper {
-    background: #7eb252 url("../img/promo.jpg") no-repeat center;
-    background-size: cover;
-
     display: flex;
     justify-content: flex-start;
 
     color: white;
+}
+
+.promo-wrapper::before {
+    content: "";
+    background: #7eb252 url("../img/promo.jpg") no-repeat center;
+    background-size: cover;
+
+    position: absolute;
+
+    width: 1720px;
+    height: 544px;
+    z-index: -1;
 }
 
 .promo-img-column {
@@ -112,8 +121,7 @@ a.number {
 }
 
 .promo-img-column img {
-    position: absolute;
-    top: 94px;
+    margin-top: 94px;
 }
 
 .promo-title {
@@ -128,7 +136,9 @@ a.number {
 }
 
 .promo-text-column {
-    width: 595px;
+    display: flex;
+    flex-direction: column;
+    width: 570px;
     padding: 100px;
 }
 
@@ -136,6 +146,12 @@ a.number {
     font-size: 18px;
     line-height: 24px;
     margin-top: 50px;
+    margin-bottom: 240px;
+}
+
+.promo-text-column .button {
+    width: 80%;
+    margin-left: auto;
 }
 
 .facts {
